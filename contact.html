@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - World Wonders Travel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #008cba;
+      color: white;
+      padding: 1.5em 2em;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 0.2em;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 2em;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #008cba;
+    }
+
+    .contact-info {
+      line-height: 1.8;
+      font-size: 1.1em;
+    }
+
+    .contact-info strong {
+      color: #005f73;
+    }
+
+    form {
+      margin-top: 2em;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #008cba;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #006b94;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 1em;
+        padding: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Reach out for bookings, questions, or just to say hi.</p>
+  </header>
+
+  <div class="container">
+    <h2>Our Contact Details</h2>
+    <div class="contact-info">
+      <p><strong>Email:</strong> hello@worldwonderstravel.com</p>
+      <p><strong>Phone:</strong> +27 678 100 789</p>
+      <p><strong>Address:</strong> 393 85th avenue, Johannesburg, TravelLand</p>
+      <p><strong>Working Hours:</strong> Monday - Friday: 9AM - 6PM</p>
+    </div>
+
+    <h2>Send Us a Message</h2>
+    <form action="#" method="post">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</body>
+</html>

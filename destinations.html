@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destinations | World Wonders Travel</title>
+  <meta name="description" content="Explore stunning travel destinations around the globe.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #008cba;
+      color: white;
+      padding: 1.5em;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #005f73;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0.8em;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1em;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #008cba;
+    }
+
+    p {
+      text-align: center;
+      margin: 0.5em 2em 2em;
+      color: #444;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
+      padding: 2em;
+    }
+
+    figure {
+      width: 280px;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    figure:hover {
+      transform: scale(1.03);
+    }
+
+    figure img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    figcaption {
+      padding: 1em;
+      color: #008cba;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .description {
+      padding: 0 1em 1em;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0.5em 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Top Travel Destinations</h1>
+    <p>Dream big. Travel far. Let your journey begin here.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="packages.html">Packages</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h2>Featured Destinations</h2>
+
+  <section class="gallery">
+    <figure>
+      <img src="images/IMG_3759.jpg" alt="Paris, France">
+      <figcaption>Paris, France</figcaption>
+      <div class="description">Stroll through romantic streets, marvel at the Eiffel Tower, and explore world-class art.</div>
+    </figure>
+
+    <figure>
+      <img src="images/IMG_3760.jpg" alt="Bali, Indonesia">
+      <figcaption>Bali, Indonesia</figcaption>
+      <div class="description">Embrace nature with waterfalls, beaches, and jungle hikes in this tropical paradise.</div>
+    </figure>
+
+    <figure>
+      <img src="images/IMG_3761.jpg" alt="New York City, USA">
+      <figcaption>New York City, USA</figcaption>
+      <div class="description">Feel the heartbeat of a global metropolis where energy, culture, and adventure meet.</div>
+    </figure>
+
+    <figure>
+      <img src="images/IMG_4059.jpg" alt="Kyoto, Japan">
+      <figcaption>Kyoto, Japan</figcaption>
+      <div class="description">Immerse yourself in history and tranquility with temples, gardens, and cherry blossoms.</div>
+    </figure>
+  </section>
+</body>
+</html>

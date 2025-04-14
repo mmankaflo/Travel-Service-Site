@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Your Trip | World Wonders Travel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f8ff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #008cba;
+      color: white;
+      padding: 2em;
+      text-align: center;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 2em;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin: 1em 0 0.3em;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.8em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #008cba;
+      color: white;
+      padding: 0.8em 2em;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 1.5em;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #006b94;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Book Your Trip</h1>
+    <p>Fill out your details to reserve a package</p>
+  </header>
+
+  <form>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" required />
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" required />
+
+    <label for="package">Select Package:</label>
+    <select id="package" required>
+      <option>Group Getaway</option>
+      <option>Private Luxury</option>
+      <option>Adventure Seeker</option>
+      <option>Cultural Immersion</option>
+    </select>
+
+    <label for="date">Travel Start Date:</label>
+    <input type="date" id="date" required />
+
+    <label for="notes">Additional Notes:</label>
+    <textarea id="notes" rows="4"></textarea>
+
+    <button type="submit">Submit Booking</button>
+  </form>
+</body>
+</html>

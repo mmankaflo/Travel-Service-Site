@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Packages | World Wonders Travel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore travel packages with pricing and features to suit every traveler." />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #008cba;
+      color: white;
+      text-align: center;
+      padding: 2em 1em;
+    }
+
+    nav {
+      background-color: #005f73;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em;
+      position: relative;
+    }
+
+    .logo {
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      transition: all 0.3s ease;
+    }
+
+    ul.nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2em;
+    }
+
+    ul.nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    ul.nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 2em 0 1em;
+      color: #008cba;
+      font-size: 2rem;
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2em;
+      padding: 2em;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .package-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 2em;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    .package-card:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .package-card:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .package-card:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+
+    .package-card h3 {
+      color: #008cba;
+      margin-bottom: 0.5em;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      color: #006b94;
+      font-weight: bold;
+      margin: 1em 0;
+    }
+
+    .features {
+      text-align: left;
+      margin: 1em auto;
+      padding-left: 1.2em;
+      max-width: 250px;
+    }
+
+    .features li {
+      margin-bottom: 0.5em;
+      color: #444;
+    }
+
+    .btn {
+      margin-top: 1em;
+      padding: 0.7em 1.5em;
+      background-color: #008cba;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #006b94;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive menu */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      ul.nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #005f73;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 1em 0;
+      }
+
+      ul.nav-links.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Travel Packages</h1>
+    <p>Find your perfect getaway with transparent pricing and premium features.</p>
+  </header>
+
+  <nav>
+    <div class="logo">🌍 World Wonders</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h2>Choose Your Adventure</h2>
+
+  <section class="packages">
+    <div class="package-card">
+      <h3>Group Getaway</h3>
+      <div class="price">From $999 / person</div>
+      <ul class="features">
+        <li>7 nights accommodation</li>
+        <li>Daily breakfast</li>
+        <li>City tours with local guides</li>
+        <li>Group transportation</li>
+      </ul>
+      <button class="btn book-btn" data-package="group-getaway">Book Now</button>
+    </div>
+
+    <div class="package-card">
+      <h3>Private Luxury</h3>
+      <div class="price">From $2,500 / person</div>
+      <ul class="features">
+        <li>Luxury 5-star hotels</li>
+        <li>Private airport transfers</li>
+        <li>Exclusive excursions</li>
+        <li>Personal concierge</li>
+      </ul>
+      <button class="btn book-btn" data-package="private-luxury">Book Now</button>
+    </div>
+
+    <div class="package-card">
+      <h3>Adventure Seeker</h3>
+      <div class="price">From $1,200 / person</div>
+      <ul class="features">
+        <li>Mountain hikes & safaris</li>
+        <li>Rafting and diving</li>
+        <li>Adventure gear included</li>
+        <li>All meals included</li>
+      </ul>
+      <button class="btn book-btn" data-package="adventure-seeker">Book Now</button>
+    </div>
+
+    <div class="package-card">
+      <h3>Cultural Immersion</h3>
+      <div class="price">From $1,100 / person</div>
+      <ul class="features">
+        <li>Language workshops</li>
+        <li>Cooking classes & meals</li>
+        <li>Local homestays</li>
+        <li>Museum and temple visits</li>
+      </ul>
+      <button class="btn book-btn" data-package="cultural-immersion">Book Now</button>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+
+    // Redirect on "Book Now" button click
+    document.querySelectorAll(".book-btn").forEach(button => {
+      button.addEventListener("click", function () {
+        const packageName = this.getAttribute("data-package");
+        const encoded = encodeURIComponent(packageName);
+        window.location.href = `booking.html?package=${encoded}`;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Travel Agency Page</title>
+  <meta name="description" content="Explore breathtaking travel destinations around the world with our trusted travel agency. Book your next adventure today!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #008cba;
+      color: white;
+      padding: 1em 2em;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #005f73;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5em 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0.5em 1em;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-top: 1em;
+      color: #333;
+    }
+
+    p {
+      text-align: center;
+      color: #555;
+      margin: 1em 2em;
+    }
+
+    ul {
+      text-align: center;
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 2em;
+    }
+
+    ul li {
+      margin: 0.5em 0;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #008cba;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+      padding: 2em;
+    }
+
+    figure {
+      text-align: center;
+      margin: 0;
+      flex: 1 1 250px;
+      max-width: 300px;
+    }
+
+    figure img {
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      filter: grayscale(100%);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.4s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    figure img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      filter: grayscale(0%);
+    }
+
+    figcaption {
+      margin-top: 0.5em;
+      color: #333; /* Default color for figcaption */
+      font-weight: bold;
+      font-size: 1.2rem;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeInCaption 1s ease forwards;
+    }
+
+    /* Specific blue color for country names */
+    .blue-text {
+      color: #008cba; /* Blue font color */
+    }
+
+    /* Black color for the description text */
+    .black-text {
+      color: black; /* Black font color for the descriptions */
+    }
+
+    .gallery figure:nth-child(1) img {
+      animation-delay: 0.2s;
+    }
+
+    .gallery figure:nth-child(2) img {
+      animation-delay: 0.4s;
+    }
+
+    .gallery figure:nth-child(3) img {
+      animation-delay: 0.6s;
+    }
+
+    .gallery figure:nth-child(1) figcaption {
+      animation-delay: 0.4s;
+    }
+
+    .gallery figure:nth-child(2) figcaption {
+      animation-delay: 0.6s;
+    }
+
+    .gallery figure:nth-child(3) figcaption {
+      animation-delay: 0.8s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInCaption {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .btn-list {
+      text-align: center;
+      margin-bottom: 2em;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    .btn-list a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #008cba;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .btn-list a:hover {
+      background-color: #006b94;
+    }
+
+    /* RESPONSIVE TWEAKS */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 0.5em 0;
+      }
+
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to World Wonders Travel</h1>
+    <p>Discover breathtaking destinations and unforgettable experiences tailored just for you. Start your journey today!</p>
+  </header>
+
+  <nav>
+    <a href="index.html" target="_blank">Home</a>
+    <a href="destinations.html" target="_blank">Destinations</a>
+    <a href="packages.html" target="_blank">Packages</a>
+    <a href="contact.html" target="_blank">Contact</a>
+</nav>
+
+  <h2>Let Us Travel</h2>
+  <p>Choose from a variety of travel packages designed to suit every taste and budget. Whether you're seeking adventure, relaxation, or cultural exploration, we have something for everyone.</p>
+  
+  <ul>
+    <li><a href="packages.html" target="_blank">Group Travels</a></li>
+    <li><a href="packages.html" target="_blank">Private Tours</a></li>
+  </ul>
+
+  <h2>Top Itineraries</h2>
+  <section class="gallery">
+    <figure>
+      <a href="destinations.html" target="_blank">
+        <img src="images/IMG_3759.jpg" alt="Paris, France">
+      </a>
+      <figcaption class="blue-text">
+        Paris, France<br>
+        <span class="black-text">“Paris isn’t just romance — it’s rooftop explorations, winding alleyway cafés, and sunrise bike rides along the Seine. Climb every stair of the Eiffel Tower and discover hidden gems behind every corner. Adventure lives in the details.”</span>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <a href="destinations.html" target="_blank">
+        <img src="images/IMG_3760.JPG" alt="Bali, Indonesia">
+      </a>
+      <figcaption class="blue-text">
+        Bali, Indonesia<br>
+        <span class="black-text">“Chase waterfalls in the jungle, surf through crystal waves, and hike volcanoes at dawn. Bali is a wild heartbeat of ancient temples and untamed beauty. Every day invites a new thrill.”</span>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <a href="destinations.html" target="_blank">
+        <img src="images/IMG_3761.jpg" alt="New York City, USA">
+      </a>
+      <figcaption class="blue-text">
+        New York City, USA<br>
+        <span class="black-text">“Dive into the buzz of street performers, secret speakeasies, and skyline hikes across the Brooklyn Bridge. NYC is an adrenaline rush with every yellow cab and subway turn. Embrace the chaos — it’s your playground.”</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <div class="btn-list">
+    <a href="packages.html" target="_blank">Group Travels</a>
+    <a href="packages.html" target="_blank">Private Tours</a>
+  </div>
+</body>
+</html>

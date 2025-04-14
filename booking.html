@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Booking | World Wonders Travel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Complete your booking with World Wonders Travel." />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f8ff;
+      color: #333;
+      padding: 2em;
+    }
+
+    header {
+      text-align: center;
+      background-color: #008cba;
+      color: white;
+      padding: 2em 1em;
+      border-radius: 10px;
+    }
+
+    h1, h2 {
+      margin: 1em 0;
+    }
+
+    .booking-details {
+      margin-top: 2em;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      background: white;
+      padding: 2em;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .package-name {
+      font-size: 1.5rem;
+      color: #008cba;
+      margin-bottom: 1em;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    input, textarea, select {
+      padding: 0.8em;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 0.8em;
+      background-color: #008cba;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #006b94;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Complete Your Booking</h1>
+    <p>You're one step away from your next adventure!</p>
+  </header>
+
+  <div class="booking-details">
+    <h2>Selected Package:</h2>
+    <div class="package-name" id="selected-package">Loading...</div>
+
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" required />
+
+      <label for="travelers">Number of Travelers:</label>
+      <select id="travelers">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4+">4+</option>
+      </select>
+
+      <label for="message">Additional Notes:</label>
+      <textarea id="message" rows="4" placeholder="Any preferences, questions, or requests?"></textarea>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </div>
+
+  <script>
+    // Read package name from URL
+    const params = new URLSearchParams(window.location.search);
+    const packageName = params.get("package");
+
+    // Convert to readable format
+    const readableName = packageName
+      ? packageName.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase())
+      : "Unknown Package";
+
+    document.getElementById("selected-package").textContent = readableName;
+  </script>
+</body>
+</html>
